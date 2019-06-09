@@ -1,0 +1,11 @@
+server: 
+  port: 6001
+  
+spring:
+  application:
+    name:  m-mall-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/icoreman/spring-cloud-mall-config.git
