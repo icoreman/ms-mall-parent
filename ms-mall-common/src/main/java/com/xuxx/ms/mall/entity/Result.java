@@ -39,9 +39,9 @@ public class Result<T> implements Serializable {
 
 	/**
 	 *  成功时候的调用
-	 * */
+	 * */	
 	public static  <T> Result<T> success(T data){
-		return new Result<T>(data).setCode(CodeMsgConstants.SUCCESS.getCode()).setMsg(CodeMsgConstants.SUCCESS.getMsg());
+		return success(data, CodeMsgConstants.SUCCESS.getMsg());
 	}
 
 	public static  <T> Result<T> success(T data, String msg){

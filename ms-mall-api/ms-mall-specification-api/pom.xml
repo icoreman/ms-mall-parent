@@ -4,17 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.xuxx.ms.mall</groupId>
-		<artifactId>ms-mall-parent</artifactId>
+		<artifactId>ms-mall-api</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ms-mall-api</artifactId>
-	<description>api 接口声明工程</description>
-	<packaging>pom</packaging>
-
-	<modules>
-		<module>ms-mall-brand-api</module>
-		<module>ms-mall-specification-api</module>
-	</modules>
+	<artifactId>ms-mall-specification-api</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -22,15 +15,6 @@
 			<artifactId>ms-mall-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-
-		<!-- 分页 -->
-		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
-		</dependency>
 	</dependencies>
+
 </project>

@@ -11,8 +11,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableEurekaClient //本服务启动后会自动注册进eureka服务中
 @EnableDiscoveryClient //服务发现
 @EnableSwagger2
-public class ConfigDeptProviderApp {
+public class MSMAllBranServiceApp {
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigDeptProviderApp.class, args);
+		SpringApplication.run(MSMAllBranServiceApp.class, args);
 	}
 }
