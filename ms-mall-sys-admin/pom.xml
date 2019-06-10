@@ -8,4 +8,7 @@
   <artifactId>ms-mall-sys-admin</artifactId>
   <description>系统管理后台</description>
   <packaging>pom</packaging>
+  <modules>
+  	<module>ms-mall-brand</module>
+  </modules>
 </project>
