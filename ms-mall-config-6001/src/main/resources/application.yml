@@ -1,9 +1,9 @@
-server: 
+server:
   port: 6001
   
 spring:
   application:
-    name:  m-mall-config
+    name: ms-mall-config
   cloud:
     config:
       server:

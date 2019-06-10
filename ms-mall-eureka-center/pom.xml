@@ -7,29 +7,23 @@
 		<artifactId>ms-mall-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ms-mall-api</artifactId>
-	<description>api 接口声明工程</description>
-	<packaging>pom</packaging>
-
-	<modules>
-		<module>ms-mall-brand-api</module>
-	</modules>
+	<artifactId>ms-mall-eureka-center</artifactId>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.xuxx.ms.mall</groupId>
-			<artifactId>ms-mall-common</artifactId>
-			<version>${project.version}</version>
-		</dependency>
+		<!-- SpringCloud Config客户端 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-
-		<!-- 分页 -->
+		<!--eureka-server服务端 -->
 		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-netflix-eureka-server</artifactId>
+		</dependency>
+		<!-- 修改后立即生效，热部署 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 	</dependencies>
 </project>
