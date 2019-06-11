@@ -77,7 +77,7 @@ public interface SpecificationService {
 	 */
 	@PostMapping("/api/v1/specifications/list")
 	public Result<PageResult<TbSpecification>> findPage(@RequestBody TbSpecification specification,
-			@RequestParam("rows") int pageNum, @RequestParam("rows") int pageSize);
+			@RequestParam("page") int pageNum, @RequestParam("rows") int pageSize);
 
 	/**
 	 * 

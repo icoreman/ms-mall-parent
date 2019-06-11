@@ -25,7 +25,7 @@ import com.xuxx.ms.mall.typetemplate.entity.TbTypeTemplate;
  * @since JDK 1.8
  *
  */
-@FeignClient(value = "ms-mall-type-template", fallbackFactory = TypeTemplateServiceFallbackFactory.class)
+@FeignClient(value = "MS-MALL-TYPE-TEMPLATE-SERVICE", fallbackFactory = TypeTemplateServiceFallbackFactory.class)
 public interface TypeTemplateService {
 
 	/**

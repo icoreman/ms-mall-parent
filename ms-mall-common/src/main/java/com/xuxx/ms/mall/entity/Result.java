@@ -7,6 +7,7 @@ import com.xuxx.ms.mall.constants.CodeMsgConstants;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 /**
  * 返回结果
@@ -16,19 +17,20 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @ApiModel(value = "结果返回类型")
+@NoArgsConstructor
 public class Result<T> implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 通用返回码
 	 */
-	@ApiModelProperty(value="返回码",name="code",example="100100")
+	@ApiModelProperty(value="返回码",name="code",example="0")
 	private int code;
 
 	/**
 	 * 通用返回消息
 	 */
-	@ApiModelProperty(value="返回消息",name="msg",example="服务端异常")
+	@ApiModelProperty(value="返回消息",name="msg",example="服务success")
 	private String msg;
 
 	/**
