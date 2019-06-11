@@ -3,7 +3,9 @@ import java.util.List;
 import java.util.Map;
 
 import com.xuxx.ms.mall.entity.PageResult;
+import com.xuxx.ms.mall.entity.Result;
 import com.xuxx.ms.mall.specification.entity.TbSpecification;
+import com.xuxx.ms.mall.specification.entity.TbSpecificationOption;
 import com.xuxx.ms.mall.specification.vo.SpecificationVO;
 /**
  * 
@@ -75,4 +77,6 @@ public interface SpecificationService {
 	 */
 	public List<Map<String,String>> selectOptionList();
 	
+	
+	public List<TbSpecificationOption> listOptionBySpecificationId(Long id);
 }

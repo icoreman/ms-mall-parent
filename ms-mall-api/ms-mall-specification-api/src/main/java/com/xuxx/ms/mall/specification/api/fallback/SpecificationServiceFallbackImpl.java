@@ -10,6 +10,7 @@ import com.xuxx.ms.mall.entity.PageResult;
 import com.xuxx.ms.mall.entity.Result;
 import com.xuxx.ms.mall.specification.api.SpecificationService;
 import com.xuxx.ms.mall.specification.entity.TbSpecification;
+import com.xuxx.ms.mall.specification.entity.TbSpecificationOption;
 
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -65,6 +66,12 @@ public class SpecificationServiceFallbackImpl implements SpecificationService {
 
 	@Override
 	public Result<List<Map<String, String>>> selectOptionList() {
+		log.error("调用 SpecificationService 失败", cause);
+		return Result.error(CodeMsgConstants.SERVER_ERROR);
+	}
+
+	@Override
+	public Result<List<TbSpecificationOption>> listOptionBySpecificationId(Long id) {
 		log.error("调用 SpecificationService 失败", cause);
 		return Result.error(CodeMsgConstants.SERVER_ERROR);
 	}

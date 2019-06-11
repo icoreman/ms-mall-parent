@@ -14,7 +14,8 @@
 	<modules>
 		<module>ms-mall-brand-api</module>
 		<module>ms-mall-specification-api</module>
-	</modules>
+        <module>ms-mall-type-template-api</module>
+    </modules>
 
 	<dependencies>
 		<dependency>

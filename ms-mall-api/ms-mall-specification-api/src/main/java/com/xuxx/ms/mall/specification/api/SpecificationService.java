@@ -1,28 +1,34 @@
 package com.xuxx.ms.mall.specification.api;
+
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xuxx.ms.mall.entity.PageResult;
 import com.xuxx.ms.mall.entity.Result;
 import com.xuxx.ms.mall.specification.api.factories.SpecificationServiceFallbackFactory;
 import com.xuxx.ms.mall.specification.entity.TbSpecification;
+import com.xuxx.ms.mall.specification.entity.TbSpecificationOption;
 import com.xuxx.ms.mall.specification.vo.SpecificationVO;
+
 /**
  * 
  * @ClassName: SpecificationService
  *
  * @author xuxx
  * @date 2019-05-13 17:54:55
- * @since  JDK 1.8
+ * @since JDK 1.8
  *
  */
-@FeignClient(value = "MS-MALL-SPECIFICATION", fallbackFactory = SpecificationServiceFallbackFactory.class)
+@FeignClient(value = "MS-MALL-SPECIFICATION-SERVICE", fallbackFactory = SpecificationServiceFallbackFactory.class)
 public interface SpecificationService {
 
 	/**
@@ -52,7 +58,7 @@ public interface SpecificationService {
 	 * @return
 	 */
 	@GetMapping("/api/v1/specifications/{id}")
-	public Result<SpecificationVO> findOne(Long id);
+	public Result<SpecificationVO> findOne(@PathVariable("id") Long id);
 
 	/**
 	 * 批量删除
@@ -60,7 +66,7 @@ public interface SpecificationService {
 	 * @param ids
 	 */
 	@DeleteMapping("/api/v1/specifications/{id}")
-	public Result<Boolean> delete(Long[] ids);
+	public Result<Boolean> delete(@PathVariable("id") Long[] ids);
 
 	/**
 	 * 分页
@@ -69,16 +75,20 @@ public interface SpecificationService {
 	 * @param pageSize 每页记录数
 	 * @return
 	 */
-	@GetMapping("/api/v1/specifications/list")
-	public Result<PageResult<TbSpecification>> findPage(TbSpecification specification, int pageNum, int pageSize);
+	@PostMapping("/api/v1/specifications/list")
+	public Result<PageResult<TbSpecification>> findPage(@RequestBody TbSpecification specification,
+			@RequestParam("rows") int pageNum, @RequestParam("rows") int pageSize);
 
 	/**
 	 * 
-	 * @Title: selectOptionList 
-	 * @Description: 获取所有规格，按照 select2 需要的格式，即{id:,text} 
+	 * @Title: selectOptionList
+	 * @Description: 获取所有规格，按照 select2 需要的格式，即{id:,text}
 	 * @return List<Map>
 	 */
 	@GetMapping("/api/v1/specifications/options")
 	public Result<List<Map<String, String>>> selectOptionList();
-	
+
+	@GetMapping("/api/v1/specifications/options/{id}")
+	public Result<List<TbSpecificationOption>> listOptionBySpecificationId(@PathVariable("id") Long id);
+
 }

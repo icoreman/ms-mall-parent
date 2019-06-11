@@ -54,7 +54,7 @@ public class Result<T> implements Serializable {
 	public static  <T> Result<T> error(CodeMsgConstants codeMsg){
 		return new Result<T>(codeMsg);
 	}
-
+	
 	public static  <T> Result<T> error(CodeMsgConstants codeMsg , T data){
 		return new Result<T>(codeMsg,data);
 	}

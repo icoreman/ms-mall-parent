@@ -165,4 +165,15 @@ public class SpecificationServiceImpl implements SpecificationService {
 	public List<Map<String, String>> selectOptionList() {
 		return specificationMapper.selectOptionList();
 	}
+
+	@Override
+	public List<TbSpecificationOption> listOptionBySpecificationId(Long id) {
+		TbSpecificationOptionExample example = new TbSpecificationOptionExample();
+		TbSpecificationOptionExample.Criteria criteria = example.createCriteria();
+		criteria.andSpecIdEqualTo(id);
+
+		List<TbSpecificationOption> options = specificationOptionMapper.selectByExample(example);
+
+		return options;
+	}
 }

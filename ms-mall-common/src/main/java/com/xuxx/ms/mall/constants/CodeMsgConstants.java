@@ -6,8 +6,8 @@ import lombok.Data;
 /**
  * 
  * Description: 业务代码
- * @Author: xuxx
- * date: Jun 9, 2019 9:58:53 PM 
+ * 
+ * @Author: xuxx date: Jun 9, 2019 9:58:53 PM
  *
  */
 @Data
@@ -32,14 +32,17 @@ public class CodeMsgConstants {
 	 */
 	public static CodeMsgConstants SERVER_ERROR = new CodeMsgConstants(100100, "服务端异常");
 	public static CodeMsgConstants BIND_ERROR = new CodeMsgConstants(100101, "参数校验异常：%s");
-	public static  CodeMsgConstants REQUEST_ILLEGAL = new CodeMsgConstants(100102, "非法请求");
-
+	public static CodeMsgConstants REQUEST_ILLEGAL = new CodeMsgConstants(100102, "非法请求");
+	public static CodeMsgConstants ID_ILLEGAL = new CodeMsgConstants(100103, "id:%s 对应数据为空");
+	
 	/**
 	 * 用户权限模块的错误码 2001XX
 	 */
-	public static CodeMsgConstants MENU_WITH_SUBORDINATES_CANNOT_BE_DELETED = new CodeMsgConstants(200100, "菜单含有下级不能删除");
+	public static CodeMsgConstants MENU_WITH_SUBORDINATES_CANNOT_BE_DELETED = new CodeMsgConstants(200100,
+			"菜单含有下级不能删除");
 	public static CodeMsgConstants ORIGINAL_PASSWORD_WRONG = new CodeMsgConstants(200101, "原密码错误，修改失败");
-	public static CodeMsgConstants FAILED_TO_OBTAIN_CURRENT_USER_INFORMATION = new CodeMsgConstants(200102, "获取当前用户信息失败~");
+	public static CodeMsgConstants FAILED_TO_OBTAIN_CURRENT_USER_INFORMATION = new CodeMsgConstants(200102,
+			"获取当前用户信息失败~");
 
 	/**
 	 * 登录与认证模块 5001XX
@@ -57,21 +60,21 @@ public class CodeMsgConstants {
 	public static CodeMsgConstants DEN_AUTH = new CodeMsgConstants(500121, "拒绝授权异常信息");
 	public static CodeMsgConstants ARGS_ERROR = new CodeMsgConstants(500122, "参数绑定异常");
 
-	//商品模块 5002XX
+	// 商品模块 5002XX
 
-	//订单模块 5003XX
+	// 订单模块 5003XX
 	public static CodeMsgConstants ORDER_NOT_EXIST = new CodeMsgConstants(500301, "订单为空~");
 	public static CodeMsgConstants ORDER_GOODSID_NULL = new CodeMsgConstants(500302, "获取订单信息错误~");
 
-	//秒杀模块 5004XX
+	// 秒杀模块 5004XX
 	public static CodeMsgConstants MIAO_SHA_OVER = new CodeMsgConstants(500400, "商品秒杀完了喔~");
 	public static CodeMsgConstants CHONG_FU_MIAOSHA = new CodeMsgConstants(500401, "不能重复秒杀商品啊大兄弟！！！");
 	public static final CodeMsgConstants MIAO_SHA_FAIL = new CodeMsgConstants(500402, "验证码引擎故障");
 
-	//网关模块 9999XX
+	// 网关模块 9999XX
 	public static CodeMsgConstants INTERCEPTION_FAILURE = new CodeMsgConstants(999901, "网关拦截失败");
 
-	//可以返回带参数的校验码
+	// 可以返回带参数的校验码
 	public CodeMsgConstants fillArgs(Object... args) {
 		int code = this.code;
 		String message = String.format(this.msg, args);

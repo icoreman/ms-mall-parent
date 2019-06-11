@@ -1,0 +1,16 @@
+server:
+  port: 6001
+  
+spring:
+  application:
+    name: ms-mall-config
+  profiles:
+    active:
+    - native
+  cloud:
+    config:
+      server: 
+        native:
+          search-locations:
+          - classpath:/config/
+         
