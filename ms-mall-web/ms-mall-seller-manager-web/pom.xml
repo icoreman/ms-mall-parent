@@ -2,14 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.xuxx.ms.mall</groupId>
-    <artifactId>ms-mall-parent</artifactId>
+    <artifactId>ms-mall-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>ms-mall-web</artifactId>
-  <packaging>pom</packaging>
-  <description>pc 端页面工程</description>
-  <modules>
-  	<module>ms-mall-manager-web</module>
-  	<module>ms-mall-seller-manager-web</module>
-  </modules>
+  <artifactId>ms-mall-seller-manager-web</artifactId>
+  <description>商家后台管理系统</description>
 </project>

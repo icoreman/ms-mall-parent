@@ -16,6 +16,7 @@
 		<module>ms-mall-specification-api</module>
         <module>ms-mall-type-template-api</module>
         <module>ms-mall-seller-api</module>
+        <module>ms-mall-item-cat-api</module>
 	</modules>
 
 	<dependencies>

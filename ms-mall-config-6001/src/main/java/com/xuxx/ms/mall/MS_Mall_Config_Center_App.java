@@ -10,9 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @EnableConfigServer
 @SpringBootApplication
-public class MSMALLConfigCenterApp implements CommandLineRunner {
+public class MS_Mall_Config_Center_App implements CommandLineRunner {
 	public static void main(String[] args) {
-		SpringApplication.run(MSMALLConfigCenterApp.class, args);
+		SpringApplication.run(MS_Mall_Config_Center_App.class, args);
 	}
 
 	@Override

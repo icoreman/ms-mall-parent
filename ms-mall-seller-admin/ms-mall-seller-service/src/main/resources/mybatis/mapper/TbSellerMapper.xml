@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xuxx.mall.mapper.TbSellerMapper" >
-  <resultMap id="BaseResultMap" type="com.xuxx.mall.pojo.TbSeller" >
+<mapper namespace="com.xuxx.ms.mall.seller.mapper.TbSellerMapper" >
+  <resultMap id="BaseResultMap" type="com.xuxx.ms.mall.seller.entity.TbSeller" >
     <id column="seller_id" property="sellerId" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
@@ -91,7 +91,7 @@
     org_number, address, logo_pic, brief, create_time, legal_person, legal_person_card_id, 
     bank_user, bank_name
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xuxx.mall.pojo.TbSellerExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xuxx.ms.mall.seller.entity.TbSellerExample" >
     select
     <if test="distinct" >
       distinct
@@ -115,13 +115,13 @@
     delete from tb_seller
     where seller_id = #{sellerId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.xuxx.mall.pojo.TbSellerExample" >
+  <delete id="deleteByExample" parameterType="com.xuxx.ms.mall.seller.entity.TbSellerExample" >
     delete from tb_seller
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.xuxx.mall.pojo.TbSeller" >
+  <insert id="insert" parameterType="com.xuxx.ms.mall.seller.entity.TbSeller" >
     insert into tb_seller (seller_id, name, nick_name, 
       password, email, mobile, 
       telephone, status, address_detail, 
@@ -141,7 +141,7 @@
       #{legalPersonCardId,jdbcType=VARCHAR}, #{bankUser,jdbcType=VARCHAR}, #{bankName,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.xuxx.mall.pojo.TbSeller" >
+  <insert id="insertSelective" parameterType="com.xuxx.ms.mall.seller.entity.TbSeller" >
     insert into tb_seller
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="sellerId != null" >
@@ -292,7 +292,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.xuxx.mall.pojo.TbSellerExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.xuxx.ms.mall.seller.entity.TbSellerExample" resultType="java.lang.Integer" >
     select count(*) from tb_seller
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -408,7 +408,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xuxx.mall.pojo.TbSeller" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.xuxx.ms.mall.seller.entity.TbSeller" >
     update tb_seller
     <set >
       <if test="name != null" >
@@ -483,7 +483,7 @@
     </set>
     where seller_id = #{sellerId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.xuxx.mall.pojo.TbSeller">
+  <update id="updateByPrimaryKey" parameterType="com.xuxx.ms.mall.seller.entity.TbSeller">
 	update tb_seller
 	set name = #{name,jdbcType=VARCHAR},
 	nick_name = #{nickName,jdbcType=VARCHAR},

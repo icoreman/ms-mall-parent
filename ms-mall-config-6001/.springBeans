@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.xuxx.ms.mall.MSMALLConfigCenterApp</config>
+		<config>java:com.xuxx.ms.mall.MS_Mall_Config_Center_App</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

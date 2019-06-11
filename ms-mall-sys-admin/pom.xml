@@ -12,5 +12,6 @@
   	<module>ms-mall-brand</module>
   	<module>ms-mall-specification</module>
       <module>ms-mall-type-tempalte</module>
+      <module>ms-mall-item-cat</module>
   </modules>
 </project>

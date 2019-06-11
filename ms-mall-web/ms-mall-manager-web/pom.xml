@@ -8,7 +8,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>ms-mall-manager-web</artifactId>
-
+	<description>运营商后台管理系统</description>
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.xuxx.ms.mall</groupId>
@@ -34,6 +35,11 @@
 			<version>${project.version}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>com.xuxx.ms.mall</groupId>
+			<artifactId>ms-mall-item-cat-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<!-- actuator监控信息完善 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
