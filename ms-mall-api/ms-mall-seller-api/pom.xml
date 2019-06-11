@@ -2,13 +2,16 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.xuxx.ms.mall</groupId>
-    <artifactId>ms-mall-parent</artifactId>
+    <artifactId>ms-mall-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>ms-mall-seller-admin</artifactId>
-  <packaging>pom</packaging>
-  <description>商家管理后台工程</description>
-  <modules>
-  	<module>ms-mall-seller-service</module>
-  </modules>
+  <artifactId>ms-mall-seller-api</artifactId>
+  
+  <dependencies>
+		<dependency>
+			<groupId>com.xuxx.ms.mall</groupId>
+			<artifactId>ms-mall-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 </project>

@@ -16,9 +16,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = { "com.xuxx.ms.mall" })
 @EnableSwagger2
-public class MSMallTypeTemplateServiceApp implements CommandLineRunner {
+public class MS_Mall_Type_Template_Service_App implements CommandLineRunner {
 	public static void main(String[] args) {
-		SpringApplication.run(MSMallTypeTemplateServiceApp.class, args);
+		SpringApplication.run(MS_Mall_Type_Template_Service_App.class, args);
 	}
 
 	@Override
