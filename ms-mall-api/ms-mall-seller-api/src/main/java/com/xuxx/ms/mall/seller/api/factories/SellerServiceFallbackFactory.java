@@ -19,6 +19,7 @@ public class SellerServiceFallbackFactory implements FallbackFactory<SellerServi
 	public SellerService create(Throwable throwable) {
 		SellerServiceFallbackImpl sellerServiceFallback = new SellerServiceFallbackImpl();
 		sellerServiceFallback.setCause(throwable);
+		
 		return sellerServiceFallback;
 	}
 }

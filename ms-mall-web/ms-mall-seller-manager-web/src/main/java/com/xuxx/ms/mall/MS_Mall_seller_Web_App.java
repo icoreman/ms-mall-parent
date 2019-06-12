@@ -6,21 +6,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 import lombok.extern.slf4j.Slf4j;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @Slf4j
+@EnableSwagger2
 @SpringBootApplication
 @EnableEurekaClient //本服务启动后会自动注册进eureka服务中
 @EnableDiscoveryClient //服务发现
 @EnableFeignClients(basePackages= {"com.xuxx.ms.mall"})
-@EnableSwagger2
-public class MSMallManagerWebApp implements CommandLineRunner {
+@ComponentScan(basePackages = {"com.xuxx.ms.mall.manager"})
+public class MS_Mall_seller_Web_App implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MSMallManagerWebApp.class,args);
+		SpringApplication.run(MS_Mall_seller_Web_App.class,args);
 	}
 	
 	@Override
