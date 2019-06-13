@@ -13,4 +13,3 @@ spring:
         native:
           search-locations:
           - classpath:/config/
-         

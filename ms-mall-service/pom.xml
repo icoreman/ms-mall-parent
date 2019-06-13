@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.xuxx.ms.mall</groupId>
+    <artifactId>ms-mall-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>ms-mall-sys-admin</artifactId>
+  <description>系统管理后台</description>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>ms-mall-service-brand</module>
+  	<module>ms-mall-service-specification</module>
+      <module>ms-mall-service-type-tempalte</module>
+      <module>ms-mall-service-item-cat</module>
+      <module>ms-mall-service-goods</module>
+      <module>ms-mall-service-seller</module>
+  </modules>
+</project>

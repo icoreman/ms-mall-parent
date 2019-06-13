@@ -34,7 +34,7 @@ public class CodeMsgConstants {
 	public static CodeMsgConstants BIND_ERROR = new CodeMsgConstants(100101, "参数校验异常：%s");
 	public static CodeMsgConstants REQUEST_ILLEGAL = new CodeMsgConstants(100102, "非法请求");
 	public static CodeMsgConstants ID_ILLEGAL = new CodeMsgConstants(100103, "id:%s 对应数据为空");
-	
+
 	/**
 	 * 用户权限模块的错误码 2001XX
 	 */
@@ -43,6 +43,12 @@ public class CodeMsgConstants {
 	public static CodeMsgConstants ORIGINAL_PASSWORD_WRONG = new CodeMsgConstants(200101, "原密码错误，修改失败");
 	public static CodeMsgConstants FAILED_TO_OBTAIN_CURRENT_USER_INFORMATION = new CodeMsgConstants(200102,
 			"获取当前用户信息失败~");
+
+	/**
+	 * 文件上传 3001XX
+	 */
+	public static CodeMsgConstants FILE_UPLOAD_FAIL = new CodeMsgConstants(300100, "文件上传失败");
+	public static CodeMsgConstants FILE_IS_EMPTY = new CodeMsgConstants(300101, "文件为空");
 
 	/**
 	 * 登录与认证模块 5001XX

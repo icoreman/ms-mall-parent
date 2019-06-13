@@ -9,7 +9,7 @@
   <packaging>pom</packaging>
   <description>pc 端页面工程</description>
   <modules>
-  	<module>ms-mall-manager-web</module>
-  	<module>ms-mall-seller-manager-web</module>
+  	<module>ms-mall-web-manager</module>
+  	<module>ms-mall-web-seller-manager</module>
   </modules>
 </project>

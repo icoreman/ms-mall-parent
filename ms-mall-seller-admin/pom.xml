@@ -9,6 +9,6 @@
   <packaging>pom</packaging>
   <description>商家管理后台工程</description>
   <modules>
-  	<module>ms-mall-seller-service</module>
+  	<module>ms-mall-service-seller</module>
   </modules>
 </project>

@@ -12,11 +12,12 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>ms-mall-brand-api</module>
-		<module>ms-mall-specification-api</module>
-        <module>ms-mall-type-template-api</module>
-        <module>ms-mall-seller-api</module>
-        <module>ms-mall-item-cat-api</module>
+		<module>ms-mall-api-brand</module>
+		<module>ms-mall-api-specification</module>
+        <module>ms-mall-api-type-template</module>
+        <module>ms-mall-api-seller</module>
+        <module>ms-mall-api-item-cat</module>
+        <module>ms-mall-api-goods</module>
 	</modules>
 
 	<dependencies>
